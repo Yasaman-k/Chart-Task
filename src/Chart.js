@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 
 const Chart = ({ data }) => {
+  const x = 0;
+  const y = 0;
+  const width = 500;
+  const height = 300;
+
   const svgRef = useRef();
   const groupRef = useRef();
   const animateRef = useRef();
   const [selection, setSelection] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
-  const [viewBox, setViewBox] = useState({ x: 0, y: 0, width: 500, height: 300 });
+  const [viewBox, setViewBox] = useState({ x, y, width, height });
   const [previousViewBox, setPreviousViewBox] = useState(viewBox);
-
-  const width = 500;
-  const height = 300;
 
   const onMouseDown = (event) => {
     const { offsetX, offsetY } = event.nativeEvent;
@@ -55,9 +57,10 @@ const Chart = ({ data }) => {
     const animateElement = animateRef.current;
     const newValue = { x: 0, y: 0, width: 500, height: 300 };
     setViewBox(newValue);
+
     if (animateElement) {
-      animateElement.setAttribute('from', '0 0 500 300');
-      animateElement.setAttribute('to', '0 0 500 300');
+      animateElement.setAttribute('from', `${x} ${y} ${width} ${height}`);
+      animateElement.setAttribute('to', `${x} ${y} ${width} ${height}`);
       animateElement.beginElement();
     }
   };
@@ -132,6 +135,7 @@ const Chart = ({ data }) => {
             strokeWidth={1}
           />
         )}
+        // Draw a line to separate negative and positive points
         <line x1="0" y1="150" x2="500" y2="150" stroke="#e1e1e1" strokeWidth={'1px'} />
         <g ref={groupRef}></g>
       </svg>

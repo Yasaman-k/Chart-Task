@@ -12,7 +12,6 @@ const UploadData = () => {
       reader.onload = (e) => {
         const contents = e.target.result;
         const jsonData = csvToJson(contents);
-        console.log(jsonData);
         setChartData(jsonData);
       };
       reader.readAsText(uploadedFile);

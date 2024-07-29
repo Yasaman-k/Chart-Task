@@ -9,10 +9,14 @@ function App() {
   return (
     <div className="container">
       <div className="navigation">
-        <p>
-          be sure that first column of your csv is x(vertical) axis and second is y(horizental) axis and it must be csv
-          file
-        </p>
+        <div>
+          <strong> Upload a CSV file. Please note the following before uploading.</strong>
+          <p>
+            1. Your CSV file must have two columns: the first column represents the x-axis, and the second column
+            represents the y-axis.
+          </p>
+          <p> 2. Ensure that all yourpoints are numerical values.</p>
+        </div>
         <UploadData />
       </div>
       {chartData && (
