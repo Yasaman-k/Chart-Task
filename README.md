@@ -5,7 +5,6 @@ Total time spent on the project: `60h`
 3. [Evaluation Criteria](#Evaluation-Criteria)
 4. [Performance](#Performance)
 5. [Improvement Opportunities](#Improvement-Opportunities)
-6. [Performance](#Performance)
 
 ## How to run the project
 
