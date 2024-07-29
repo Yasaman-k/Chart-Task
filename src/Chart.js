@@ -23,6 +23,7 @@ const Chart = ({ data }) => {
   };
 
   const onMouseMove = (event) => {
+    event.preventDefault();
     if (!isDragging) return;
     const { offsetX, offsetY } = event.nativeEvent;
     setSelection({ ...selection, x2: offsetX, y2: offsetY });

@@ -9,8 +9,11 @@ function App() {
   return (
     <div className="container">
       <div className="navigation">
-        <div>
-          <strong> Upload a CSV file. Please note the following before uploading.</strong>
+        <div className="note">
+          <p>
+            <strong> Upload a CSV file. Please note the following before uploading.</strong>
+          </p>
+
           <p>
             1. Your CSV file must have two columns: the first column represents the x-axis, and the second column
             represents the y-axis.
@@ -19,7 +22,9 @@ function App() {
         </div>
         <UploadData />
       </div>
-      {chartData && <div className="chart">{chartData.length > 0 ? <Chart data={chartData} /> : <>loading...</>}</div>}
+      {chartData && (
+        <div className="chart-container">{chartData.length > 0 ? <Chart data={chartData} /> : <>loading...</>}</div>
+      )}
     </div>
   );
 }
