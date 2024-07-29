@@ -1,5 +1,7 @@
 Total time spent on the project: `60h`
 
+## TOC
+
 1. [How to run the project](#How-to-run-the-project)
 2. [Task Definition](#Task-Definition)
 3. [Evaluation Criteria](#Evaluation-Criteria)
