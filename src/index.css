@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  padding: 40px 60px 20px 60px;
+}
+.navigation > :first-child {
+  margin-right: 10px;
+}
+
+.chart {
+  padding: 10px 60px;
+}
+
+.chart-svg {
+  transition: viewBox 0.5s ease-in-out;
+  border: 1px solid black;
+  display: block;
+  max-width: 100%;
+  min-height: 100%;
+  height: auto;
+  z-index: 999;
+}
