@@ -42,6 +42,7 @@ const UploadData = () => {
         // Convert to number if applicable
         try {
           if (isNaN(cleanedItem)) {
+            setChartData(null);
             throw new Error('points must be a number');
           } else {
             return Number(cleanedItem);
