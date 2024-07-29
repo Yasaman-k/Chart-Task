@@ -19,11 +19,7 @@ function App() {
         </div>
         <UploadData />
       </div>
-      {chartData && (
-        <div className="chart">
-          <Chart data={chartData} />
-        </div>
-      )}
+      {chartData && <div className="chart">{chartData.length > 0 ? <Chart data={chartData} /> : <>loading...</>}</div>}
     </div>
   );
 }

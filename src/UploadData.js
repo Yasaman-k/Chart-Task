@@ -6,6 +6,7 @@ const UploadData = () => {
   const fileInputRef = useRef(null);
 
   const handleFileUpload = (e) => {
+    setChartData([]);
     const uploadedFile = e.target.files[0];
     if (uploadedFile) {
       const reader = new FileReader();
