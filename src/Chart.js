@@ -5,6 +5,7 @@ const Chart = ({ data }) => {
   const y = 0;
   const width = 500;
   const height = 300;
+  const circleR = 3;
 
   const svgRef = useRef();
   const groupRef = useRef();
@@ -96,7 +97,7 @@ const Chart = ({ data }) => {
       const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       circle.setAttribute('cx', xScale(point.X));
       circle.setAttribute('cy', yScale(point.Y));
-      circle.setAttribute('r', 5);
+      circle.setAttribute('r', circleR);
       circle.setAttribute('fill', 'blue');
       group.appendChild(circle);
     });
