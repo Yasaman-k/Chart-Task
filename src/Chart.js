@@ -16,6 +16,7 @@ const Chart = ({ data }) => {
   const [previousViewBox, setPreviousViewBox] = useState(viewBox);
 
   const onMouseDown = (event) => {
+    event.preventDefault();
     const { offsetX, offsetY } = event.nativeEvent;
     setSelection({ x1: offsetX, y1: offsetY, x2: offsetX, y2: offsetY });
     setIsDragging(true);
