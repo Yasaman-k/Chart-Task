@@ -1,4 +1,4 @@
-Total time spent on the project: `60h`
+Total time spent on the project: `24h`
 
 ## TOC
 
